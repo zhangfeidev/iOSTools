@@ -23,9 +23,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>94351B68-FB14-457F-8175-5ECD98D240ED</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>cell重用代码块</string>
 	<key>IDECodeSnippetTitle</key>

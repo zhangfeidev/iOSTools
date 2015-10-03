@@ -3,24 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>myassign</string>
+	<string>initframe</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,assign) &lt;#type#&gt; &lt;#value#&gt;;</string>
+	<string> -(instancetype)initWithFrame:(CGRect)frame{
+ 
+     self = [super initWithFrame:frame];
+     
+     if(self){
+     
+     &lt;#code#&gt;
+ 
+     }
+ 
+     return self;
+ }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>18F92F1F-F80B-4867-830E-1FC24FC37E65</string>
+	<string>C1AF8505-0A1C-49AF-BAFD-A8229C8539BA</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>property的assign,用于基本数据类型</string>
+	<string>快速initframe</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>myassign</string>
+	<string>initframe</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
