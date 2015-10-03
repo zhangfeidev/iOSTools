@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>initshareManager</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (instancetype *)sharedManager
+    
+    {
+        
+        static AccountManager *sharedAccountManagerInstance = nil;
+        
+        static dispatch_once_t predicate;
+        
+        dispatch_once(&amp;predicate, ^{
+            
+            sharedAccountManagerInstance = [[self alloc] init];
+            
+        });
+        
+        return sharedAccountManagerInstance;  
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D50F0F97-09DB-41A6-AC3E-CF3FE53065F1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>初始化一个单例</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>initshareManager</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
