@@ -1,7 +1,7 @@
 //
 //  main.m
 //  QRScannerDemo
-//  blog:www.zhangfei.tk
+//
 //  Created by zhangfei on 15/10/14.
 //  Copyright © 2015年 zhangfei. All rights reserved.
 //

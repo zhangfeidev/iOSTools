@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "QRCScannerViewController.h"
 #import "UIImage+MDQRCode.h"
+#import "QRCScanner.h"
 
 @interface ViewController ()<QRCodeScannerViewControllerDelegate>
 
@@ -26,7 +27,7 @@
     [self initViewAndSubViews];
 }
 
-#pragma mark 扫描二维码
+#pragma mark  扫描二维码
 - (void)showQRReader:(id)sender {
     QRCScannerViewController *VC = [[QRCScannerViewController alloc] init];
     VC.delegate = self;
@@ -35,7 +36,8 @@
 
 #pragma mark 生成二维码
 - (void)makeQRCode:(UIButton *)sender{
-    self.qrImageView.image = [UIImage mdQRCodeForString:@"你好，这是二维码的内容！" size:self.qrImageView.bounds.size.width fillColor:[UIColor blackColor]];
+    //带有图标的二维码
+    self.qrImageView.image = [QRCScanner scQRCodeForString:@"你好，这是二维码的内容！" size:self.qrImageView.bounds.size.width fillColor:[UIColor blackColor] subImage:[UIImage imageNamed:@"jd"]];
 }
 
 #pragma mark - 扫描二维码完成后的代理方法
@@ -76,5 +78,23 @@
     self.qrImageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - qrimageWidth)/2,250,qrimageWidth,qrimageWidth)];
     [self.view addSubview:self.qrImageView];
 }
-
+#pragma mark - 辅助方法
+-(UIImage *)addSubImage:(UIImage *)img sub:(UIImage *) subImage
+{
+    //get image width and height
+    int w = img.size.width;
+    int h = img.size.height;
+    int subWidth = subImage.size.width;
+    int subHeight = subImage.size.height;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    //create a graphic context with CGBitmapContextCreate
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
+    CGContextDrawImage(context, CGRectMake( (w-subWidth)/2, (h - subHeight)/2, subWidth, subHeight), [subImage CGImage]);
+    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    return [UIImage imageWithCGImage:imageMasked];
+    //  CGContextDrawImage(contextRef, CGRectMake(100, 50, 200, 80), [smallImg CGImage]);
+}
 @end

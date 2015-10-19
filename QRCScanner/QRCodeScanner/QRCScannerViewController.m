@@ -21,7 +21,7 @@
     scanner.delegate = self;
     [self.view addSubview:scanner];
 }
-
+#pragma mark - 扫描二维码成功后结果的代理方法
 - (void)didFinshedScanningQRCode:(NSString *)result{
     
     if ([self.delegate respondsToSelector:@selector(didFinshedScanning:)]) {

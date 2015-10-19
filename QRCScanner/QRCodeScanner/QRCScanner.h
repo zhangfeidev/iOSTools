@@ -43,4 +43,34 @@
  *  @return QRCScanner实例
  */
 - (instancetype)initQRCScannerWithView:(UIView *)view;
+/**
+ *  根据给定的字符串生成一个给定尺寸的二维码image
+ *
+ *  @param qrString 二维码的内容
+ *  @param size     二维码生成后的尺寸大小
+ *
+ *  @return 二维码
+ */
++ (UIImage *)scQRCodeForString:(NSString *)qrString size:(CGFloat)size;
+/**
+ *  根据给定的字符串生成一个给定尺寸和给定颜色的二维码image
+ *
+ *  @param qrString  二维码的内容
+ *  @param size      二维码生成后的尺寸大小
+ *  @param fillColor 二维码填充颜色
+ *
+ *  @return 二维码
+ */
++ (UIImage *)scQRCodeForString:(NSString *)qrString size:(CGFloat)size fillColor:(UIColor *)fillColor;
+/**
+ *  生成中间有logo的二维码
+ *
+ *  @param qrString  二维码的内容
+ *  @param size      二维码生成后的尺寸大小
+ *  @param fillColor 二维码填充颜色
+ *  @param subImage  二维码的子图
+ *
+ *  @return 带有子图的二维码
+ */
++ (UIImage *)scQRCodeForString:(NSString *)qrString size:(CGFloat)size fillColor:(UIColor *)fillColor subImage:(UIImage *)subImage;
 @end

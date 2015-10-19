@@ -8,16 +8,17 @@
 
 #import "QRCScanner.h"
 #import <AVFoundation/AVFoundation.h>
+#import "UIImage+MDQRCode.h"
 
-#define LINE_SCAN_TIME  2.0 // 扫描线从上到下扫描所历时间（s）
+#define LINE_SCAN_TIME  2.0     // 扫描线从上到下扫描所历时间（s）
 
 @interface QRCScanner() <AVCaptureMetadataOutputObjectsDelegate>
 
+@property (nonatomic,strong)NSTimer *scanLineTimer;
 @property (nonatomic,strong)UIView *scanLine;
 @property (nonatomic,strong)UILabel *noticeInfoLable;
 @property (nonatomic,strong)UIButton *lightButton;
 
-@property (nonatomic,strong)NSTimer *scanLineTimer;
 @property (nonatomic,assign)CGRect clearDrawRect;
 @property (nonatomic,assign)BOOL isOn;
 
@@ -49,6 +50,19 @@
 
 - (void)drawRect:(CGRect)rect {
     [self updateLayout];
+}
+#pragma mark - 对二维码生成的封装
++ (UIImage *)scQRCodeForString:(NSString *)qrString size:(CGFloat)size{
+    return [UIImage mdQRCodeForString:qrString size:size];;
+}
+
++ (UIImage *)scQRCodeForString:(NSString *)qrString size:(CGFloat)size fillColor:(UIColor *)fillColor{
+    return [UIImage mdQRCodeForString:qrString size:size fillColor:fillColor];
+}
+
++ (UIImage *)scQRCodeForString:(NSString *)qrString size:(CGFloat)size fillColor:(UIColor *)fillColor subImage:(UIImage *)subImage{
+    UIImage *qrImage = [UIImage mdQRCodeForString:qrString size:size fillColor:fillColor];
+    return [self addSubImage:qrImage sub:subImage];
 }
 
 #pragma mark - setter and getter
@@ -306,7 +320,7 @@
 }
 #pragma mark  - 辅助方法
 //将UIColor转换为RGB值
-- (NSMutableArray *)changeUIColorToRGB:(UIColor *)color
+- (NSMutableArray *) changeUIColorToRGB:(UIColor *)color
 {
     NSMutableArray *RGBStrValueArr = [[NSMutableArray alloc] init];
     NSString *RGBStr = nil;
@@ -329,5 +343,22 @@
     //返回保存RGB值的数组
     return RGBStrValueArr;
 }
-
++ (UIImage *)addSubImage:(UIImage *)img sub:(UIImage *) subImage
+{
+    //get image width and height
+    int w = img.size.width;
+    int h = img.size.height;
+    int subWidth = subImage.size.width;
+    int subHeight = subImage.size.height;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    //create a graphic context with CGBitmapContextCreate
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
+    CGContextDrawImage(context, CGRectMake( (w-subWidth)/2, (h - subHeight)/2, subWidth, subHeight), [subImage CGImage]);
+    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    return [UIImage imageWithCGImage:imageMasked];
+    //  CGContextDrawImage(contextRef, CGRectMake(100, 50, 200, 80), [smallImg CGImage]);
+}
 @end
