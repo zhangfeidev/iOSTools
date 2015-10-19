@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543C76A31BD4BF0F007F13F1 /* QRCScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C76A21BD4BF0F007F13F1 /* QRCScannerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		54619CB81BCE4D0500D6DEB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54619CB71BCE4D0500D6DEB5 /* main.m */; };
 		54619CBB1BCE4D0500D6DEB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54619CBA1BCE4D0500D6DEB5 /* AppDelegate.m */; };
 		54619CBE1BCE4D0500D6DEB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54619CBD1BCE4D0500D6DEB5 /* ViewController.m */; };
@@ -23,17 +24,7 @@
 		54619D601BCE4F9200D6DEB5 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 54619D461BCE4F9200D6DEB5 /* rscode.c */; settings = {ASSET_TAGS = (); }; };
 		54619D611BCE4F9200D6DEB5 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 54619D481BCE4F9200D6DEB5 /* split.c */; settings = {ASSET_TAGS = (); }; };
 		54619D621BCE4F9200D6DEB5 /* UIImage+MDQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 54619D4B1BCE4F9200D6DEB5 /* UIImage+MDQRCode.m */; settings = {ASSET_TAGS = (); }; };
-		546F38EC1BCF7A910027EEED /* ff_QRCodeScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38E31BCF7A910027EEED /* ff_QRCodeScanLine@2x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38ED1BCF7A910027EEED /* ScanQR1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38E41BCF7A910027EEED /* ScanQR1@2x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38EE1BCF7A910027EEED /* ScanQR1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38E51BCF7A910027EEED /* ScanQR1@3x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38EF1BCF7A910027EEED /* ScanQR2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38E61BCF7A910027EEED /* ScanQR2@2x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38F01BCF7A910027EEED /* ScanQR2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38E71BCF7A910027EEED /* ScanQR2@3x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38F11BCF7A910027EEED /* ScanQR3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38E81BCF7A910027EEED /* ScanQR3@2x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38F21BCF7A910027EEED /* ScanQR3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38E91BCF7A910027EEED /* ScanQR3@3x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38F31BCF7A910027EEED /* ScanQR4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38EA1BCF7A910027EEED /* ScanQR4@2x.png */; settings = {ASSET_TAGS = (); }; };
-		546F38F41BCF7A910027EEED /* ScanQR4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546F38EB1BCF7A910027EEED /* ScanQR4@3x.png */; settings = {ASSET_TAGS = (); }; };
 		546F38FA1BCFC9060027EEED /* QRCScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 546F38F91BCFC9060027EEED /* QRCScanner.m */; settings = {ASSET_TAGS = (); }; };
-		546F38FD1BCFC9BD0027EEED /* QRCScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 546F38FC1BCFC9BD0027EEED /* QRCScannerViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		543C76A11BD4BF0F007F13F1 /* QRCScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCScannerViewController.h; sourceTree = "<group>"; };
+		543C76A21BD4BF0F007F13F1 /* QRCScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCScannerViewController.m; sourceTree = "<group>"; };
 		54619CB31BCE4D0500D6DEB5 /* QRScannerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScannerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54619CB71BCE4D0500D6DEB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54619CB91BCE4D0500D6DEB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,19 +79,8 @@
 		54619D491BCE4F9200D6DEB5 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
 		54619D4A1BCE4F9200D6DEB5 /* UIImage+MDQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MDQRCode.h"; sourceTree = "<group>"; };
 		54619D4B1BCE4F9200D6DEB5 /* UIImage+MDQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MDQRCode.m"; sourceTree = "<group>"; };
-		546F38E31BCF7A910027EEED /* ff_QRCodeScanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff_QRCodeScanLine@2x.png"; sourceTree = "<group>"; };
-		546F38E41BCF7A910027EEED /* ScanQR1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR1@2x.png"; sourceTree = "<group>"; };
-		546F38E51BCF7A910027EEED /* ScanQR1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR1@3x.png"; sourceTree = "<group>"; };
-		546F38E61BCF7A910027EEED /* ScanQR2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR2@2x.png"; sourceTree = "<group>"; };
-		546F38E71BCF7A910027EEED /* ScanQR2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR2@3x.png"; sourceTree = "<group>"; };
-		546F38E81BCF7A910027EEED /* ScanQR3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR3@2x.png"; sourceTree = "<group>"; };
-		546F38E91BCF7A910027EEED /* ScanQR3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR3@3x.png"; sourceTree = "<group>"; };
-		546F38EA1BCF7A910027EEED /* ScanQR4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR4@2x.png"; sourceTree = "<group>"; };
-		546F38EB1BCF7A910027EEED /* ScanQR4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR4@3x.png"; sourceTree = "<group>"; };
 		546F38F81BCFC9060027EEED /* QRCScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCScanner.h; sourceTree = "<group>"; };
 		546F38F91BCFC9060027EEED /* QRCScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCScanner.m; sourceTree = "<group>"; };
-		546F38FB1BCFC9BD0027EEED /* QRCScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QRCScannerViewController.h; path = QRCodeScanner/QRCScannerViewController.h; sourceTree = "<group>"; };
-		546F38FC1BCFC9BD0027EEED /* QRCScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRCScannerViewController.m; path = QRCodeScanner/QRCScannerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +134,8 @@
 				54619D281BCE4F9200D6DEB5 /* QRCodeScanner */,
 				54619CBC1BCE4D0500D6DEB5 /* ViewController.h */,
 				54619CBD1BCE4D0500D6DEB5 /* ViewController.m */,
-				546F38FB1BCFC9BD0027EEED /* QRCScannerViewController.h */,
-				546F38FC1BCFC9BD0027EEED /* QRCScannerViewController.m */,
+				543C76A11BD4BF0F007F13F1 /* QRCScannerViewController.h */,
+				543C76A21BD4BF0F007F13F1 /* QRCScannerViewController.m */,
 				54619CC21BCE4D0500D6DEB5 /* Assets.xcassets */,
 				54619CB61BCE4D0500D6DEB5 /* Supporting Files */,
 			);
@@ -204,28 +186,11 @@
 		54619D2B1BCE4F9200D6DEB5 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				54619D2C1BCE4F9200D6DEB5 /* images */,
 				54619D3B1BCE4F9200D6DEB5 /* libqrencode */,
 				54619D4A1BCE4F9200D6DEB5 /* UIImage+MDQRCode.h */,
 				54619D4B1BCE4F9200D6DEB5 /* UIImage+MDQRCode.m */,
 			);
 			path = resource;
-			sourceTree = "<group>";
-		};
-		54619D2C1BCE4F9200D6DEB5 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				546F38E31BCF7A910027EEED /* ff_QRCodeScanLine@2x.png */,
-				546F38E41BCF7A910027EEED /* ScanQR1@2x.png */,
-				546F38E51BCF7A910027EEED /* ScanQR1@3x.png */,
-				546F38E61BCF7A910027EEED /* ScanQR2@2x.png */,
-				546F38E71BCF7A910027EEED /* ScanQR2@3x.png */,
-				546F38E81BCF7A910027EEED /* ScanQR3@2x.png */,
-				546F38E91BCF7A910027EEED /* ScanQR3@3x.png */,
-				546F38EA1BCF7A910027EEED /* ScanQR4@2x.png */,
-				546F38EB1BCF7A910027EEED /* ScanQR4@3x.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		54619D3B1BCE4F9200D6DEB5 /* libqrencode */ = {
@@ -353,17 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				54619CC61BCE4D0500D6DEB5 /* LaunchScreen.storyboard in Resources */,
-				546F38F31BCF7A910027EEED /* ScanQR4@2x.png in Resources */,
-				546F38EF1BCF7A910027EEED /* ScanQR2@2x.png in Resources */,
-				546F38F21BCF7A910027EEED /* ScanQR3@3x.png in Resources */,
 				54619CC31BCE4D0500D6DEB5 /* Assets.xcassets in Resources */,
-				546F38F41BCF7A910027EEED /* ScanQR4@3x.png in Resources */,
-				546F38F11BCF7A910027EEED /* ScanQR3@2x.png in Resources */,
-				546F38EE1BCF7A910027EEED /* ScanQR1@3x.png in Resources */,
-				546F38ED1BCF7A910027EEED /* ScanQR1@2x.png in Resources */,
-				546F38EC1BCF7A910027EEED /* ff_QRCodeScanLine@2x.png in Resources */,
 				54619CC11BCE4D0500D6DEB5 /* Main.storyboard in Resources */,
-				546F38F01BCF7A910027EEED /* ScanQR2@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,8 +350,8 @@
 				54619D601BCE4F9200D6DEB5 /* rscode.c in Sources */,
 				54619CBE1BCE4D0500D6DEB5 /* ViewController.m in Sources */,
 				546F38FA1BCFC9060027EEED /* QRCScanner.m in Sources */,
+				543C76A31BD4BF0F007F13F1 /* QRCScannerViewController.m in Sources */,
 				54619D5C1BCE4F9200D6DEB5 /* mask.c in Sources */,
-				546F38FD1BCFC9BD0027EEED /* QRCScannerViewController.m in Sources */,
 				54619D5D1BCE4F9200D6DEB5 /* qrencode.c in Sources */,
 				54619D5E1BCE4F9200D6DEB5 /* qrinput.c in Sources */,
 				54619D611BCE4F9200D6DEB5 /* split.c in Sources */,
