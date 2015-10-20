@@ -73,4 +73,12 @@
  *  @return 带有子图的二维码
  */
 + (UIImage *)scQRCodeForString:(NSString *)qrString size:(CGFloat)size fillColor:(UIColor *)fillColor subImage:(UIImage *)subImage;
+/**
+ *  从图片中读取二维码
+ *
+ *  @param qrimage 一张二维码图片
+ *
+ *  @return 二维码信息
+ */
++ (NSString *)scQRReaderForImage:(UIImage *)qrimage NS_AVAILABLE_IOS(8_0);
 @end
