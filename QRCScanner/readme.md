@@ -12,7 +12,11 @@ scanner.delegate = self;
 [self.view addSubview:scanner];
 //然后实现其代理方法- (void)didFinshedScanningQRCode:(NSString *)result;即可
 ```
+- 从一张图片中读取二维码
 
+``` Objective-C
+[QRCScanner scQRReaderForImage:qrimage];
+```
 - 生成二维码
 
 ``` Objective-C

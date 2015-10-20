@@ -64,7 +64,16 @@
     UIImage *qrImage = [UIImage mdQRCodeForString:qrString size:size fillColor:fillColor];
     return [self addSubImage:qrImage sub:subImage];
 }
-
+#pragma mark  - 从图片中读取二维码
++ (NSString *)scQRReaderForImage:(UIImage *)qrimage{
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:context options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
+    CIImage *image = [CIImage imageWithCGImage:qrimage.CGImage];
+    NSArray *features = [detector featuresInImage:image];
+    CIQRCodeFeature *feature = [features firstObject];
+    NSString *result = feature.messageString;
+    return result;
+}
 #pragma mark - setter and getter
 - (void)setTransparentAreaSize:(CGSize)transparentAreaSize{
     _transparentAreaSize = transparentAreaSize;
@@ -301,7 +310,7 @@
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
--(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
     [self.session stopRunning];
     [self.preview removeFromSuperlayer];
